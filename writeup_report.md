@@ -47,13 +47,11 @@ My project includes the following files:
 #### 2. Submission includes functional code
 Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
 ```
-sh
 python drive.py model.h5
 ```
 
 Fir the second track:
 ```
-sh
 python2.7 drive.py model_2.h5
 ```
 
