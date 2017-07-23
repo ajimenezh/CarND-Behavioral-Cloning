@@ -5,9 +5,10 @@ import random
 import gc
 
 PATH = './data5'
-NUMBER_IMAGES_LR = 1
+NUMBER_IMAGES_LR = 1 # 1 for center image, 3 to use also left and right
 FLIP = 2 # 2 to flip images, 1 normal
 
+# Converts the image to grayscale
 def rgb2gray(rgb):
     return np.dot(rgb[...,:3], [0.299, 0.587, 0.114])[:, :, np.newaxis]
     
@@ -24,7 +25,7 @@ X_train = np.array([])
 cnt = 0
 
 # To reduce the memory, I resize the array initially to prevent data duplication
-# when copying the data
+# when copying the data, and I store the images directly in X_train
 X_train = np.zeros((len(lines)*FLIP*NUMBER_IMAGES_LR, 160,320,1), dtype=int)
 
 for line in lines:
@@ -42,6 +43,7 @@ for line in lines:
 			
 			measurement = float(line[3])
 			
+			# correction for the left and right images
 			correction = 0.20
 			if i == 1:
 				measurement = measurement - correction
