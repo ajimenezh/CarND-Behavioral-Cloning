@@ -26,6 +26,7 @@ cnt = 0
 
 # To reduce the memory, I resize the array initially to prevent data duplication
 # when copying the data, and I store the images directly in X_train
+# I prefer this method because the generators are very slow, and the results are worse
 X_train = np.zeros((len(lines)*FLIP*NUMBER_IMAGES_LR, 160,320,1), dtype=int)
 
 for line in lines:
