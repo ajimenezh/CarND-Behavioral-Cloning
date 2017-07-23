@@ -41,7 +41,7 @@ My project includes the following files:
 * model.h5 containing a trained convolution neural network 
 * writeup_report.md or writeup_report.pdf summarizing the results
 * data1_60.mp4 video file of the first track
-* model_2.h5 containing a trained convolution neural network to drive the second track (it has been generated with python 2.7, in contrast with model.h5 which is generated for python 3.5)
+* model_2.h5 contains a trained convolution neural network to drive the second track (it has been generated with python 2.7, in contrast with model.h5 which is generated for python 3.5)
 * data2_60.mp4 video file of the second track
 
 #### 2. Submission includes functional code
